@@ -1,16 +1,23 @@
 ## Put comments here that give an overall description of what your
 ## functions do
 
-## Write a short comment describing this function
+## This function creates a vectpr that set the value of the vector and get it 
+##and also get the value of the inverse and set it
 ##Edited 15_jan_2019
+## Added Comments to code
+
 makeCacheMatrix <- function(x = matrix()) {
         inv <- NULL
+        ## set the value of the vector
         set <- function(y) {
                 x <<- y
                 inv <<- NULL
         }
+        ## get the value of the vector
         get <- function() x
+        ## set the value of the inverse of the matrix
         setinv <-function (solve) inv <<- solve
+        ## get the value of the inverse of the matrix
         getinv <- function() inv
         list(set = set, get = get,
              setinv = setinv,
@@ -18,7 +25,7 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
+## This calculates the inverse of the matrix but first checks whether it has already been computed
 
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
