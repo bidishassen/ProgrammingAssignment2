@@ -2,7 +2,7 @@
 ## functions do
 
 ## Write a short comment describing this function
-
+##Edited 15_jan_2019
 makeCacheMatrix <- function(x = matrix()) {
         inv <- NULL
         set <- function(y) {
